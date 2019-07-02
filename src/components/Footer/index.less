@@ -1,0 +1,38 @@
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: #ededed;
+  text-align: center;
+
+  .footerInner {
+    width: 100%;
+    height: 100%;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .footerLinks {
+      margin-bottom: 40px;
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        padding: 0 20px 3px 20px;
+        color: #666;
+        transition: all .3s ease-in;
+        position: relative;
+
+        &:hover {
+          color: red;
+          transition: all .3s ease-in;
+        }
+      }
+    }
+
+    .copyright {
+      font-size: 15px;
+    }
+  }
+}

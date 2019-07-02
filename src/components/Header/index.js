@@ -7,14 +7,8 @@ export default class Header extends Component {
     return (
       <div className={style.header}>
         <div className={style.inner}>
-          <div className={style.logo} />
-          <ul className={style.links}>
-            <li><Link to="/">News</Link></li>
-            <li><Link to="/support">Support</Link></li>
-            <li><Link to="/support">Support</Link></li>
-            <li><Link to="/support">Support</Link></li>
-            <li><Link to="/support">Support</Link></li>
-          </ul>
+          <Link to="/" className={style.logo} />
+          <div className={style.menu} />
         </div>
       </div>
     );

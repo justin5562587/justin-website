@@ -1,0 +1,92 @@
+.pageWrapper {
+  width: 100%;
+  border: 25px solid #ededed;
+  padding-top: 50px;
+
+  .pageInner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .workHeader {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 0 30px;
+      margin-bottom: 30px;
+
+      .workInfo {
+        flex: 2;
+        color: #666;
+        text-align: left;
+
+        .workTitle {
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
+
+        .workDescription {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .workCategory {
+        flex: 3;
+        text-align: right;
+        padding-bottom: 10px;
+
+        span {
+          font-size: 16px;
+          color: #666;
+          cursor: pointer;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #e09a0e;
+          margin-left: 40px;
+        }
+      }
+    }
+
+    .workList {
+      display: flex;
+      flex-wrap: wrap;
+
+      .workItem {
+        width: 33.33%;
+        padding: 30px;
+
+        a {
+          width: 100%;
+          cursor: pointer;
+          display: block;
+          text-decoration: none;
+
+          .itemPic {
+            width: 100%;
+            height: 250px;
+            background-color: #3da0e0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-bottom: 20px;
+            transition: all .3s ease-in-out;
+          }
+
+          .itemInfo {
+            color: #666;
+
+            .itemTitle {
+              font-size: 20px;
+              margin-bottom: 10px;
+            }
+
+            .itemDescription {
+              font-size: 14px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

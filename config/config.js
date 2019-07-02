@@ -18,7 +18,15 @@ export default {
   ],
   routes: [
     { path: '/', component: './Homepage' },
-    { path: '/support', component: './Support' },
+    {
+      path: '/work', component: './Work'
+    },
+    {
+      path: '/contact', component: './Contact'
+    },
+    {
+      path: '/blog', component: './Blog'
+    },
     { path: '*', component: './NotFound' },
   ],
   // configuration for webpack
