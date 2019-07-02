@@ -1,26 +1,72 @@
 .header {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 
   .inner {
     width: 100%;
     max-width: 1400px;
-    height: 50px;
     margin: 0 auto;
     padding: 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    .logo {
-      display: inline-block;
-      height: 100%;
-      width: 50px;
-      background: #3da0e0;
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      margin-bottom: 60px;
+
+      .logo {
+        display: inline-block;
+        height: 100%;
+        width: 50px;
+        background: #3da0e0;
+      }
+
+      .menu {
+
+      }
     }
 
-    .menu {
+    .pageInfo {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .pageText {
+        flex: 2;
+        color: #666;
+        text-align: left;
+        max-width: 50%;
+
+        .pageTitle {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        .pageDescription {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .pageCategory {
+        flex: 3;
+        text-align: right;
+        padding-bottom: 10px;
+
+        span {
+          font-size: 16px;
+          color: #666;
+          cursor: pointer;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #e09a0e;
+          margin-left: 40px;
+        }
+      }
+
 
     }
+
+
   }
 }

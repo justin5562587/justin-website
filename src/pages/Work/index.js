@@ -10,23 +10,12 @@ export default class Work extends Component {
   render() {
     return (
       <div className={style.pageWrapper}>
-        <Header />
+        <Header
+          title="Work"
+          description="Our everyday work is presented here, we do what we love, Case studies, video presentations and photo-shootings below."
+          category={['All', 'Life', 'Game', 'Painting', 'Japanese']}
+        />
         <div className={style.pageInner}>
-          <div className={style.workHeader}>
-            <div className={style.workInfo}>
-              <p className={style.workTitle}>Portfolio</p>
-              <p className={style.workDescription}>Our everyday work is presented here, we do what we love,
-                Case studies, video presentations and photo-shootings below.
-              </p>
-            </div>
-            <div className={style.workCategory}>
-              <span>All</span>
-              <span>Life</span>
-              <span>Game</span>
-              <span>Painting</span>
-              <span>Japanese</span>
-            </div>
-          </div>
           <div className={style.workList}>
             {
               works.map(i => (
