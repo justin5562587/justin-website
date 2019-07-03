@@ -15,11 +15,11 @@ export class Input extends Component {
 
 export class Textarea extends Component {
   render() {
-    const { label, id, inputBlur } = this.props;
+    const { label, id, placeholder = 'please enter content', inputBlur } = this.props;
     return (
       <div className={style.textareaWrap}>
         <label htmlFor={id}>{label}</label>
-        <textarea name="" id={id} cols="30" rows="10" onBlur={inputBlur} />
+        <textarea name="" id={id} placeholder={placeholder} cols="30" rows="10" onBlur={inputBlur} />
       </div>
     );
   }

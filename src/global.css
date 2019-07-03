@@ -19,3 +19,11 @@ ul, li {
 input, textarea, button {
   outline: none;
 }
+
+input::placeholder {
+  color: #cfcfcf;
+}
+
+textarea::placeholder {
+  color: #cfcfcf;
+}
