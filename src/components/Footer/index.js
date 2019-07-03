@@ -8,10 +8,10 @@ export default class Footer extends Component {
       <div className={style.footer}>
         <div className={style.footerInner}>
           <div className={style.footerLinks}>
-            <Link to="/">Twitter</Link>
-            <Link to="/">Twitter</Link>
-            <Link to="/">Twitter</Link>
-            <Link to="/">Twitter</Link>
+            <Link to="/">Home</Link>
+            <Link to="/work">Works</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/contact">Contact</Link>
             <Link to="/">Twitter</Link>
           </div>
           <p className={style.copyright}>© Copyright 2019 | Kalium Theme by Laborator</p>

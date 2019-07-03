@@ -7,5 +7,61 @@
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+
+    .main {
+      display: flex;
+      padding: 0 30px;
+      margin-bottom: 100px;
+
+      .info {
+        flex: 3;
+        padding-left: 100px;
+
+        .infoItem {
+          height: 50px;
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          color: #666;
+          margin-bottom: 10px;
+          padding: 10px 0;
+          border-bottom: 1px solid #efefef;
+
+          p:nth-child(1) {
+            flex: 2;
+            padding-right: 20px;
+          }
+
+          p:nth-child(2) {
+            flex: 5;
+          }
+        }
+      }
+
+      .form {
+        flex: 5;
+        width: 100%;
+        margin: 0 auto;
+
+        .submit {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          width: 200px;
+          background: #686868;
+          transition: all .3s ease-in-out;
+          color: #fff;
+          font-size: 16px;
+          cursor: pointer;
+
+          &:hover {
+            transition: all .3s ease-in-out;
+            background-color: #2f7fe0;
+          }
+        }
+      }
+    }
+
   }
 }

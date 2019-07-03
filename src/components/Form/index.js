@@ -3,11 +3,11 @@ import style from './index.less';
 
 export class Input extends Component {
   render() {
-    const { label, id, type = 'text', inputBlur } = this.props;
+    const { label, id, type = 'text', placeholder = 'please enter content', inputBlur } = this.props;
     return (
       <div className={style.inputWrap}>
         <label htmlFor={id}>{label}</label>
-        <input id={id} type={type} onBlur={inputBlur} />
+        <input id={id} type={type} placeholder={placeholder} onBlur={inputBlur} />
       </div>
     );
   }
