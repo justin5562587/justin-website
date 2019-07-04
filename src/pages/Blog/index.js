@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import { connect } from 'dva';
 import style from './index.less';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
@@ -6,6 +7,15 @@ import Header from '@/components/Header';
 const blog = [1, 1, 1, 1];
 
 export default class Blog extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {
+
+  }
+
   render() {
     return (
       <div className={style.pageWrapper}>
