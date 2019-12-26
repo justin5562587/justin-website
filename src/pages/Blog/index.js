@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
-// import { connect } from 'dva';
+import { connect } from 'dva';
 import style from './index.less';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
-const blog = [1, 1, 1, 1];
-
-export default class Blog extends Component {
+@connect(({ blog }) => ({
+  blogList: blog.blogList,
+}))
+class Blog extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
   componentDidMount() {
-
+    const { dispatch } = this.props;
+    dispatch({
+      type: 'blog/list',
+    });
   }
 
   render() {
+    const { blogList = [] } = this.props;
+    console.warn(blogList)
     return (
       <div className={style.pageWrapper}>
         <Header
@@ -26,15 +32,13 @@ export default class Blog extends Component {
         <div className={style.pageInner}>
           <div className={style.blogList}>
             {
-              blog.map(i => (
+              blogList && blogList.map(i => (
                 <div className={style.blogItem}>
                   <div className={style.itemPic} />
                   <div className={style.itemInfo}>
-                    <p className={style.itemTitle}>Fashions fade, style is eternal {i}</p>
-                    <p className={style.itemDescription}>
-                      Fanny pack beard pop-up twee tote bag DIY. Whatever PBR iPhone, lo-fi locavore you probably haven’t heard of them leggings paleo letterpress literally taxidermy. Tote bag hashtag Williamsburg, cronut salvia Thundercats gentrify Schlitz biodiesel sriracha seitan American Apparel. Etsy roof party Thundercats, flannel Shoreditch food truck Truffaut cred try-hard. Paleo aesthetic Wes Anderson cliche. Sartorial…
-                    </p>
-                    <p className={style.itemTime}>March 14, 2015</p>
+                    <p className={style.itemTitle}>{i.title}</p>
+                    <p className={style.itemDescription}>{i.subtitle}</p>
+                    <p className={style.itemTime}>{i.createTime}</p>
                   </div>
                 </div>
               ))
@@ -46,3 +50,5 @@ export default class Blog extends Component {
     );
   }
 }
+
+export default Blog;
