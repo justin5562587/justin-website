@@ -22,7 +22,6 @@ class Blog extends Component {
 
   render() {
     const { blogList = [] } = this.props;
-    console.warn(blogList)
     return (
       <div className={style.pageWrapper}>
         <Header
@@ -32,7 +31,7 @@ class Blog extends Component {
         <div className={style.pageInner}>
           <div className={style.blogList}>
             {
-              blogList && blogList.map(i => (
+               blogList.map(i => (
                 <div className={style.blogItem}>
                   <div className={style.itemPic} />
                   <div className={style.itemInfo}>

@@ -4,7 +4,9 @@ export default {
   namespace: 'blog',
 
   state: {
+    error: null,
     blogList: [],
+    blogDetail: null,
   },
 
   effects: {
@@ -15,15 +17,24 @@ export default {
           yield put({
             type: 'saveList',
             payload: apiResult.data.data,
-          })
+          });
         }
       } catch (e) {
-        console.warn(e);
+        yield put({
+          type: 'saveError',
+          payload: e,
+        });
       }
     },
   },
 
   reducers: {
+    saveError(state, action) {
+      return {
+        ...state,
+        error: action.payload,
+      };
+    },
     saveList(state, action) {
       return {
         ...state,
